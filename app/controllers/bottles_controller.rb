@@ -7,11 +7,14 @@ class BottlesController < ApplicationController
   def create
     @bottle = Bottle.new(bottle_params)
     if @bottle.save
-      session[:bottle_id] = @bottle.id
-      redirect_to bottles_path(@bottle)
+      redirect_to bottle_path(@bottle)
     else
       render :new
     end
+  end
+
+  def show
+    @bottle = Bottle.find_by(params[:id])
   end
 
   def index
