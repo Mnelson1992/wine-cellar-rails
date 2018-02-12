@@ -1,1 +1,17 @@
+
+<%= link_to "Home", root_path %>
 <h1> Here is your bottle of <%= @bottle.name%></h1>
+
+  <%# @bottles.each do |bottle| %>
+    Name:  <%= @bottle.name %>
+    <br>
+    Grape:  <%= @bottle.grape %>
+    <br>
+    Year:  <%= @bottle.year %>
+    <br>
+    Location:  <%= @bottle.location %>
+    <br>
+  <%#end%>
+  <%= link_to "Delete Bottle", bottle_path(@bottle), :method => "delete" %>
+  <%= link_to "Edit Bottle", edit_bottle_path(@bottle) %>
+  <%= link_to "View All Bottles", bottles_path %>

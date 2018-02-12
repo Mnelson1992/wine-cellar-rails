@@ -34,6 +34,12 @@ class BottlesController < ApplicationController
       end
   end
 
+  def destroy
+    @bottle = Bottle.find(params[:id])
+    @bottle.delete
+    redirect_to bottles_path
+  end
+
   private
 
   def bottle_params

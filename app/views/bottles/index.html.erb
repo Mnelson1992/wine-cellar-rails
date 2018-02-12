@@ -1,5 +1,9 @@
-<h1> Welcome to your bottles </h1>
-
+<%= link_to "Home", root_path %>
+<h1> Here are the bottles in your Wine Cellar </h1>
+  <% @bottles.each do |bottle| %>
+    <%= link_to "#{bottle.name}", bottle_path(bottle) %>
+    <br>
+  <%end%>
 
 
 
