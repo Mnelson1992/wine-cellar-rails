@@ -21,6 +21,19 @@ class BottlesController < ApplicationController
     @bottles = Bottle.all
   end
 
+  def edit
+    @bottle = Bottle.find(params[:id])
+  end
+
+  def update
+      @bottle = Bottle.find(params[:id])
+      if @bottle.update(bottle_params)
+          redirect_to @bottle
+      else
+          render :edit
+      end
+  end
+
   private
 
   def bottle_params

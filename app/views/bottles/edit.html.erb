@@ -1,0 +1,17 @@
+<h1> Edit your bottle </h1>
+
+<%= form_for @bottle do |f| %>
+  <%=f.label :name %>
+  <%=f.text_field :name %>
+  <br>
+  <%=f.label :grape %>
+  <%=f.text_field :grape %>
+  <br>
+  <%=f.label :year %>
+  <%=f.number_field :year %>
+  <br>
+  <%=f.label :location %>
+  <%=f.text_field :location%>
+  <br>
+  <%=f.submit "Add Bottle" %>
+<%end%>
