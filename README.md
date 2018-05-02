@@ -1,25 +1,26 @@
-# README
+# Wine Cellar Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to your online Wine-Cellar. This is the rails version of the wine-cellar application that was initially developed using Sinatra. This CRUD application allows a user to keep track of their wine bottles
 
-This is just a test to see if I can push to git hub
-Things you may want to cover:
+# Installation
+To install this application use the following steps:
+  * Fork and clone this repository, and then execute:
+  ```  
+    $ bundle install
+    $ rake db:migrate
 
-* Ruby version
+  ```
 
-* System dependencies
+  * Then run:
+  ```
+    $ rails s
+  ```
+  * Open up a new browser window and navigate to:
+  ```
+    localhost:3000
+  ```
+# Contributions
+If you notice any bugs or would like to contribute to this application, please send a pull request. When you send a pull request please provide a detailed description of the contribution and or bug that you may have noticed.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# License
+  * The application is available as open source under the terms of the MIT License.
